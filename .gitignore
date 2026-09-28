@@ -1,0 +1,48 @@
+# ============ 运行产物（不要提交）============
+# 抓下来的曲谱截图
+*.png
+*.jpg
+*.jpeg
+
+# 个人抓取进度（含已抓曲谱 ID 列表，属使用者本地状态）
+crawl_state.json
+crawl_state.json.tmp
+crawl_state.json.bak
+crawl_state.json.bad
+
+# 运行日志（含轮转出来的历史文件）
+run.log
+run.log.*
+
+# 已用 UA 指纹池（跨运行去重用；删掉它相当于把所有 UA 重新视为可用）
+ua_pool.txt
+
+# 浏览器临时 profile（程序退出时异步删除，被杀可能残留 .del）
+_browser_profile*
+
+# 使用者本地配置（可能写了个人路径）
+crawler.config.json
+
+# ============ 编译产物 ============
+# exe 体积约 7MB，不建议进源码仓库。
+# 发布方式：GitHub Releases 附加，或让使用者跑 build.bat 自行编译。
+*.exe
+*.dll
+*.sys
+
+# ============ 开发 / 系统 ============
+.vscode/
+.idea/
+*.swp
+*.tmp
+.DS_Store
+Thumbs.db
+
+# Python 构建工具产生的缓存
+__pycache__/
+*.pyc
+
+# ============ 抓包文件（可能含 Cookie 与会话标识）============
+*.har
+*.pcap
+*.chls
